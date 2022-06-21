@@ -26,41 +26,47 @@ const NavBar = () => {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-primary rounded-box w-52"
           >
             <li>
-              <a>Item 1</a>
-            </li>
-            <li tabIndex="0">
-              <a className="justify-between">Parent</a>
+              <a>Home</a>
             </li>
             <li>
-              <a>Item 3</a>
+              <a>About</a>
+            </li>
+
+            <li>
+              <a>Statistics</a>
+            </li>
+            <li>
+              <a>Map</a>
+            </li>
+            <li>
+              <a>Contact</a>
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <a className="btn btn-ghost normal-case text-xl">EQ Works</a>
       </div>
       <div className="navbar-center bg-primary hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
           <li>
-            <a>Item 1</a>
-          </li>
-          <li tabIndex="0">
-            <a>Parent</a>
-            <ul className="p-2">
-              <li>
-                <a>Submenu 1</a>
-              </li>
-              <li>
-                <a>Submenu 2</a>
-              </li>
-            </ul>
+            <a>Home</a>
           </li>
           <li>
-            <a>Item 3</a>
+            <a>About</a>
+          </li>
+
+          <li>
+            <a>Statistics</a>
+          </li>
+          <li>
+            <a>Map</a>
+          </li>
+          <li>
+            <a>Contact</a>
           </li>
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn">Get started</a>
+        <a className="btn">Login</a>
       </div>
     </div>
   );

@@ -32,7 +32,7 @@ const Graph = ({ stats }) => {
           }}
         >
           <CartesianGrid stroke="#f5f5f5" />
-          <XAxis dataKey="date" scale="band" />
+          <XAxis dataKey="impressions" scale="band" />
           <YAxis dataKey="revenue" />
           <Tooltip />
           <Legend />
