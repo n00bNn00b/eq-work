@@ -11,12 +11,14 @@ import {
   Legend,
 } from "recharts";
 
-const Graph = ({ stat, stats }) => {
+const Graph = ({ stats }) => {
   const { impressions, clicks, date, revenue } = stats;
 
   return (
-    <div className="mt-10">
-      <h1 className="text-center font-bold text-2xl">Chart</h1>
+    <div className="mt-10 w-full">
+      <h1 className="text-center text-secondary font-bold text-2xl">
+        Daily Statistics
+      </h1>
       <div className="mt-20 flex justify-center align-center">
         <ComposedChart
           width={500}
@@ -38,6 +40,7 @@ const Graph = ({ stat, stats }) => {
           <Line type="monotone" dataKey="clicks" stroke="#ff7300" />
         </ComposedChart>
       </div>
+      <button className="flex mx-auto bg-secondary">Button</button>
     </div>
   );
 };
