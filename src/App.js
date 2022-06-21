@@ -1,7 +1,15 @@
+import Banner from "./components/Banner";
+import Chart from "./components/Chart";
+import NavBar from "./components/NavBar";
+import Search from "./components/Search";
+
 function App() {
   return (
-    <div className="App">
-      <h1>Hello EQ Works!</h1>
+    <div>
+      <NavBar />
+      <Banner />
+      <Search />
+      <Chart />
     </div>
   );
 }
