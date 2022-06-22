@@ -20,12 +20,7 @@ const Chart = () => {
   return (
     <div>
       {stats.splice(0, 1).map((stat, index) => (
-        <Graph
-          key={index}
-          stat={stat}
-          date={stat.date.split("T")[0]}
-          stats={stats}
-        />
+        <Graph key={index} stat={stat} stats={stats} />
       ))}
     </div>
   );
