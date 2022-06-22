@@ -1,4 +1,3 @@
-import { info } from "daisyui/src/colors";
 import React from "react";
 import {
   ComposedChart,
@@ -12,17 +11,17 @@ import {
 } from "recharts";
 
 const Graph = ({ stats }) => {
-  const { impressions, clicks, date, revenue } = stats;
+  // const { impressions, clicks, date, revenue } = stats;
 
   return (
-    <div className="mt-10 w-full">
+    <div className="mt-10">
       <h1 className="text-center text-secondary font-bold text-2xl">
         Daily Statistics
       </h1>
       <div className="mt-20 flex justify-center align-center">
         <ComposedChart
-          width={500}
-          height={400}
+          width={400}
+          height={500}
           data={stats}
           margin={{
             top: 20,
@@ -32,7 +31,7 @@ const Graph = ({ stats }) => {
           }}
         >
           <CartesianGrid stroke="#f5f5f5" />
-          <XAxis dataKey="impressions" scale="band" />
+          <XAxis dataKey="date" scale="band" />
           <YAxis dataKey="revenue" />
           <Tooltip />
           <Legend />
