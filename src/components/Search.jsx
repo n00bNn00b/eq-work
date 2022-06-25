@@ -25,19 +25,23 @@ const Search = () => {
     searchResults.map((val) => {
       console.log(val);
 
-      if (val.name === searchValue) {
+      if (searchValue === val.name) {
         // console.log("lon:", val.lon, "lat:", val.lat);
         let pos = [];
-        pos.push(val.lat, val.lon);
-        setPostion(pos);
-        setPlace(val.name);
-      } else {
-        return val;
+
+        if (pos === null) {
+          console.log("map error!");
+        } else {
+          pos.push(val.lat, val.lon);
+          setPostion(pos);
+          setPlace(val.name);
+          setMap(true);
+        }
+      } else if (searchValue === "" || searchValue === null) {
+        console.log("error");
       }
       e.target.reset();
     });
-
-    setMap(true);
   };
   // console.log("place:", place);
   // console.log("position:", position);

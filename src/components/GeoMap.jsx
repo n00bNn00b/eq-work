@@ -12,6 +12,9 @@ const markerIcon = new L.Icon({
 const GeoMap = ({ position, place }) => {
   const pos = position;
   console.log(position);
+  if (pos === null) {
+    console.log("null fixed");
+  }
 
   return (
     <div className="flex justify-center items-center">
