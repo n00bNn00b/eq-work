@@ -83,6 +83,7 @@ const Search2 = () => {
                             onClick={() => {
                               setSearchItems(searchResult.name);
                               setSelected(true);
+                              searchHandler();
                             }}
                           >
                             {!selected && searchResult.name}
