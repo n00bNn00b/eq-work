@@ -17,7 +17,7 @@ const GeoMap = ({ position, place }) => {
   return (
     <div className="flex justify-center">
       <MapContainer
-        className="border-r-4 h-screen w-screen rounded mx-4"
+        className="border-r-4 h-screen w-screen rounded mx-4 z-0"
         center={pos}
         zoom={11}
         scrollWheelZoom={false}

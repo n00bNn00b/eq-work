@@ -41,7 +41,7 @@ const Search2 = () => {
   };
 
   return (
-    <div>
+    <div className="mt-20">
       <div className="mt-10">
         <form onSubmit={searchHandler}>
           <div className="flex justify-center">
