@@ -75,16 +75,18 @@ const Search2 = () => {
                   .map((searchResult) => {
                     return (
                       <div key={searchResult.poi_id}>
-                        <p
-                          className="hover:bg-secondary hover:text-base-100"
-                          style={{ cursor: "pointer" }}
-                          onClick={() => {
-                            setSearchItems(searchResult.name);
-                            setSelected(true);
-                          }}
-                        >
-                          {!selected && searchResult.name}
-                        </p>
+                        {!selected && (
+                          <p
+                            className="p-2 m-1 hover:bg-secondary hover:text-base-100"
+                            style={{ cursor: "pointer" }}
+                            onClick={() => {
+                              setSearchItems(searchResult.name);
+                              setSelected(true);
+                            }}
+                          >
+                            {!selected && searchResult.name}
+                          </p>
+                        )}
                       </div>
                     );
                   })}
