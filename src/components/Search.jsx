@@ -32,7 +32,7 @@ const Search2 = () => {
         setPlace(val.name);
         setMap(true);
       } else if (searchValue === "" || searchValue === null) {
-        console.log("error");
+        // console.log("error");
         setMap(false);
       }
       e.target.reset();
@@ -54,6 +54,7 @@ const Search2 = () => {
                 value={searchItems}
                 onChange={(e) => {
                   setSearchItems(e.target.value);
+
                   // console.log(searchItems);
                 }}
               />
