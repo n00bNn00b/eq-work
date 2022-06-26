@@ -43,7 +43,9 @@ const NavBar = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">EQ Works</a>
+        <a href="/" className="btn btn-ghost normal-case text-xl">
+          EQ Works
+        </a>
       </div>
       <div className="navbar-center bg-primary hidden lg:flex">
         <ul className="menu menu-horizontal p-0">

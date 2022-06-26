@@ -39,7 +39,6 @@ const Graph = ({ stats }) => {
           <Line type="monotone" dataKey="clicks" stroke="#ff7300" />
         </ComposedChart>
       </div>
-      <button className="flex mx-auto bg-secondary">Button</button>
     </div>
   );
 };
