@@ -11,30 +11,32 @@ const markerIcon = new L.Icon({
 
 const GeoMap = ({ position, place }) => {
   const pos = position;
-  console.log(position);
-  if (pos === null) {
-    console.log("null fixed");
-  }
+
+  console.log(position, place);
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center">
       <MapContainer
-        style={{ width: "1000px", height: "600px" }}
+        style={{ width: "800px", height: "500px" }}
+        className="border-r-4 rounded"
         center={pos}
-        zoom={13}
+        zoom={11}
         scrollWheelZoom={false}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <Marker position={position} icon={markerIcon}>
+        <Marker position={pos} icon={markerIcon}>
           <Popup>
-            <div>
-              {place}
-              <p>latitude: {pos[0]}</p>
-              <p>longtitude:{pos[1]} </p>
-            </div>
+            <p className="font-bold"> {place}</p>
+            <p>
+              <span className="font-bold">latitude:</span> {pos[0]}
+            </p>
+            <p>
+              {" "}
+              <span className="font-bold">longtitude:</span> {pos[1]}{" "}
+            </p>
           </Popup>
         </Marker>
       </MapContainer>
