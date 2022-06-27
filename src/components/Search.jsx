@@ -98,7 +98,7 @@ const Search = () => {
 
             <input
               type="submit"
-              className="btn btn-secondary mx-2"
+              className="btn btn-secondary mx-1"
               value="Search"
             />
           </div>

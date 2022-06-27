@@ -11,12 +11,12 @@ function App() {
   return (
     <div>
       <NavBar />
-      <div className="mx-5">
-        <Banner />
-        <About />
-        <Search />
-        <Chart />
-      </div>
+
+      <Banner />
+      <About />
+      <Search />
+      <Chart />
+
       <Footer />
       <ToastContainer />
     </div>
