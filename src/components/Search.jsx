@@ -6,7 +6,7 @@ import GeoMap from "./GeoMap";
 const Search = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [searchItems, setSearchItems] = useState("");
-  const [selected, setSelected] = useState(false);
+  const [selected, setSelected] = useState(true);
   const [map, setMap] = useState(false);
   const [place, setPlace] = useState("");
   let [position, setPostion] = useState([]);
@@ -55,57 +55,44 @@ const Search = () => {
                 value={searchItems}
                 onChange={(e) => {
                   setSearchItems(e.target.value);
+                  setSelected(true);
                   // console.log(searchItems);
                 }}
               />
-
               {searchItems.length !== 0 &&
                 searchResults
                   .filter((value) => {
-                    // if (searchItems === value.name) {
-                    //   console.log("value:", value);
-                    //   return value.name;
-                    // } else if (
-                    //   value.name
-                    //     .toLowerCase()
-                    //     .includes(searchItems.toLowerCase())
-                    // ) {
-                    //   console.log("match", value);
-                    //   return value;
-                    // } else {
-                    //   // console.log("else:", value);
-                    // }
-                    // return map;
-                    // console.log("test:", value);
                     const name = value.name;
-                    // console.log("name", name);
-                    // console.log("search:", searchItems);
+
                     if (
                       name.toLowerCase().includes(searchItems.toLowerCase())
                     ) {
                       console.log("matched:", value);
-                      return value;
+                      return true;
                     } else if (searchItems === "") {
-                      return 0;
+                      return false;
                     }
-                    return 0;
+                    return false;
                   })
                   .map((searchResult) => {
+                    // console.log("map called");
                     return (
-                      <div key={searchResult.poi_id}>
-                        {!selected && (
-                          <p
-                            className="p-2 m-1 hover:bg-secondary hover:text-base-100"
-                            style={{ cursor: "pointer" }}
-                            onClick={() => {
-                              setSearchItems(searchResult.name);
-                              setSelected(true);
-                            }}
-                          >
-                            {!selected && searchResult.name}
-                          </p>
-                        )}
-                      </div>
+                      selected && (
+                        <div key={searchResult.poi_id}>
+                          {
+                            <p
+                              className="p-2 m-1 hover:bg-secondary hover:text-base-100"
+                              style={{ cursor: "pointer" }}
+                              onClick={() => {
+                                setSearchItems(searchResult.name);
+                                setSelected(false);
+                              }}
+                            >
+                              {searchResult.name}
+                            </p>
+                          }
+                        </div>
+                      )
                     );
                   })}
             </div>

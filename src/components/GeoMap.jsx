@@ -11,15 +11,13 @@ const markerIcon = new L.Icon({
 
 const GeoMap = ({ position, place }) => {
   const pos = position;
-
-  console.log(position, place);
-
+  // console.log(position, place);
   return (
     <div className="flex justify-center">
       <MapContainer
         className="border-r-4 h-screen w-screen rounded z-0"
         center={pos}
-        zoom={11}
+        zoom={13}
         scrollWheelZoom={false}
       >
         <TileLayer
