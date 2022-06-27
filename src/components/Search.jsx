@@ -36,7 +36,9 @@ const Search = () => {
       } else if (searchValue === "" || searchValue === null) {
         // console.log("error");
         setMap(false);
-        toast.error("Search can not be empty!");
+        toast.warning("Search can not be empty!");
+      } else {
+        toast.warning(searchValue + " was not in database!");
       }
       e.target.reset();
       return position;
