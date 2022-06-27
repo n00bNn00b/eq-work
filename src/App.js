@@ -6,17 +6,17 @@ import Search from "./components/Search";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import About from "./components/About";
+import Contact from "./components/Contact";
 
 function App() {
   return (
     <div>
       <NavBar />
-
       <Banner />
       <About />
       <Search />
       <Chart />
-
+      <Contact />
       <Footer />
       <ToastContainer />
     </div>
