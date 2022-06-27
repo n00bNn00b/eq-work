@@ -100,12 +100,11 @@ const Search = () => {
               type="submit"
               className="btn btn-secondary mx-2"
               value="Search"
-              onChange={searchHandler}
             />
           </div>
         </form>
       </div>
-      <div className="mt-20">
+      <div className="mt-10">
         {map && <GeoMap place={place} position={position} />}
       </div>
     </div>
