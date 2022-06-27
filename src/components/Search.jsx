@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 // import { toast } from "react-toastify";
 import GeoMap from "./GeoMap";
 
@@ -35,6 +36,7 @@ const Search = () => {
       } else if (searchValue === "" || searchValue === null) {
         // console.log("error");
         setMap(false);
+        toast.error("Search can not be empty!");
       }
       e.target.reset();
       return position;
