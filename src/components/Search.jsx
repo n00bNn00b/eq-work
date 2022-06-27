@@ -23,7 +23,7 @@ const Search = () => {
     const searchValue = e.target.search.value;
     // console.log(searchValue);
     searchResults.map((val) => {
-      console.log(val);
+      // console.log(val);
       let pos = [];
 
       if (searchValue === val.name) {
@@ -63,11 +63,10 @@ const Search = () => {
                 searchResults
                   .filter((value) => {
                     const name = value.name;
-
                     if (
                       name.toLowerCase().includes(searchItems.toLowerCase())
                     ) {
-                      console.log("matched:", value);
+                      // console.log("matched:", value);
                       return true;
                     } else if (searchItems === "") {
                       return false;

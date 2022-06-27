@@ -26,20 +26,20 @@ const NavBar = () => {
             className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-primary rounded-box w-52"
           >
             <li>
-              <a>Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a>About</a>
+              <a href="#about">About</a>
             </li>
 
             <li>
-              <a>Statistics</a>
+              <a href="#stats">Statistics</a>
             </li>
             <li>
-              <a>Map</a>
+              <a href="#map">Map</a>
             </li>
             <li>
-              <a>Contact</a>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -50,26 +50,26 @@ const NavBar = () => {
       <div className="navbar-center bg-primary hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
           <li>
-            <a>Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a>About</a>
+            <a href="#about">About</a>
           </li>
 
           <li>
-            <a>Statistics</a>
+            <a href="#stat">Statistics</a>
           </li>
           <li>
-            <a>Map</a>
+            <a href="#map">Map</a>
           </li>
           <li>
-            <a>Contact</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </div>
-      <div className="navbar-end">
+      {/* <div className="navbar-end">
         <a className="btn">Login</a>
-      </div>
+      </div> */}
     </div>
   );
 };

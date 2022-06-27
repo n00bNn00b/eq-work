@@ -13,7 +13,7 @@ const GeoMap = ({ position, place }) => {
   const pos = position;
   // console.log(position, place);
   return (
-    <div className="flex justify-center">
+    <div id="map" className="flex justify-center">
       <MapContainer
         className="border-r-4 h-screen w-screen rounded z-0"
         center={pos}

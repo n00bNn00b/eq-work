@@ -14,7 +14,7 @@ const Graph = ({ stats }) => {
   // const { impressions, clicks, date, revenue } = stats;
 
   return (
-    <div className="my-20 sm:my-40">
+    <div id="stat" className="my-20 sm:my-40">
       <h1 className="text-center text-secondary font-bold text-2xl">
         Daily Statistics
       </h1>
