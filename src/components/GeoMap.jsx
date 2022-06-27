@@ -18,7 +18,7 @@ const GeoMap = ({ position, place }) => {
         className="border-r-4 h-screen w-screen rounded z-0"
         center={position}
         zoom={13}
-        scrollWheelZoom={true}
+        scrollWheelZoom={false}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
